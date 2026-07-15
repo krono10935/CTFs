@@ -5,5 +5,9 @@ from levels.level2 import Level2
 from levels.level3 import Level3
 from levels.level4 import Level4
 from levels.level5 import Level5
+from levels.easy import EasyChallenge
+from levels.medium import MediumChallenge
+from levels.hard import HardChallenge
 
-ALL_LEVELS = [Level1, Level2, Level3, Level4, Level5]
+ALL_LEVELS = [Level1, Level2, Level3, Level4, Level5,
+              EasyChallenge, MediumChallenge, HardChallenge]

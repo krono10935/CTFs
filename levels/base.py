@@ -36,6 +36,11 @@ class Level:
         self.fails = 0
         self.solved = False
 
+    @property
+    def display_name(self):
+        """Name shown in the header and completion popup (e.g. 'Easy')."""
+        return f"Level {self.number}"
+
     # -- answer parsing helper (shared by all levels) ----------------------
     @staticmethod
     def parse_println(text):
@@ -92,8 +97,13 @@ class Level:
         header.pack_propagate(False)
         tk.Label(header, text="⚔  The Warden", font=app.f_btn,
                  bg=INK, fg="white").pack(side="left", padx=18)
-        tk.Label(header, text=f"Level {self.number}", font=app.f_small,
+        tk.Label(header, text=self.display_name, font=app.f_small,
                  bg=INK, fg="#94a3b8").pack(side="right", padx=18)
+        # Universal reset control — rebuilds the current level from scratch.
+        tk.Button(header, text="⟲ Reset", font=app.f_small, bg=INK,
+                  fg="#94a3b8", activebackground=INK, activeforeground="white",
+                  relief="flat", bd=0, cursor="hand2",
+                  command=self.app.restart_level).pack(side="right", padx=(0, 4))
         self.decorate_header(header)
         return header
 
@@ -213,7 +223,7 @@ class Level:
         tk.Label(band, text="✓", font=("Segoe UI", 44, "bold"),
                  bg=ACCENT, fg="white").pack(pady=(18, 0))
 
-        tk.Label(pop, text=f"Level {self.number} Complete!", font=app.f_title,
+        tk.Label(pop, text=f"{self.display_name} Complete!", font=app.f_title,
                  bg=BG_WHITE, fg=INK).pack(pady=(22, 6))
         tk.Label(pop, text="You answered the warden in fluent Java.",
                  font=app.f_body, bg=BG_WHITE, fg=MUTED).pack()

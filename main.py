@@ -20,6 +20,7 @@ import tkinter as tk
 from tkinter import font as tkfont
 
 import make_files
+import progress
 from theme import (
     ACCENT, ACCENT_DARK, APP_TITLE, BG_SOFT, BG_WHITE, DANGER, INK, MUTED,
     PASSWORD,
@@ -140,7 +141,8 @@ class GameApp:
 
     def try_login(self):
         if self.pw_entry.get().strip() == PASSWORD:
-            self.level_index = 0
+            # Resume at the saved phase (default: Level 1).
+            self.level_index = progress.index_for(progress.load())
             self.start_current_level()
         else:
             self.login_error.config(text="Wrong password. Try again.")
@@ -155,6 +157,9 @@ class GameApp:
         level_cls = self.LEVELS[self.level_index]
         self.current_level = level_cls(self)
         self.current_level.build()
+        # Persist the phase so we can resume and so the WPILib Main knows which
+        # challenge to run.
+        progress.save(progress.token_for(self.level_index))
 
     def restart_level(self):
         """Rebuild the current level from scratch (fresh state)."""
@@ -168,6 +173,7 @@ class GameApp:
         else:
             # No more levels yet. For now, close the game.
             # TODO: replace with a "You beat the warden" end screen.
+            progress.save("DONE")
             self.root.destroy()
 
 
