@@ -7,6 +7,7 @@ instructions as the greeting, a one-line input that must match the password the
 challenge revealed.
 """
 
+import sys
 import tkinter as tk
 from pathlib import Path
 from tkinter import messagebox
@@ -15,8 +16,13 @@ import vscode
 from levels.base import Level
 from theme import ACCENT, ACCENT_DARK, INK
 
-# The WPILib project these challenges live in (this file is levels/challengelevel.py).
-PROJECT_DIR = Path(__file__).resolve().parent / "challenges" / "Challenges"
+# The WPILib project these challenges live in. From source it sits under this
+# package; inside a PyInstaller build __file__ points into the bundle, so ship the
+# "Challenges" folder next to the .exe and resolve it there (see BUILD_WINDOWS.md).
+if getattr(sys, "frozen", False):
+    PROJECT_DIR = Path(sys.executable).resolve().parent / "Challenges"
+else:
+    PROJECT_DIR = Path(__file__).resolve().parent / "challenges" / "Challenges"
 # Where the per-challenge solution files live inside that project.
 CHALLENGES_JAVA = (PROJECT_DIR / "src" / "main" / "java" / "frc" / "robot"
                    / "challenges")
