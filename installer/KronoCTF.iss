@@ -23,6 +23,9 @@ Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription
 [Files]
 ; Package the whole PyInstaller onedir output.
 Source: "..\dist\KronoCTF\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
+; Ship the WPILib challenge project as a real folder next to the exe. The app copies
+; it to a writable per-user location on first launch (see robotproject.ensure_ready).
+Source: "..\levels\challenges\Challenges\*"; DestDir: "{app}\Challenges"; Flags: recursesubdirs; Excludes: "\build\*,\.gradle\*,\bin\*"
 
 [Icons]
 Name: "{group}\KronoCTF"; Filename: "{app}\KronoCTF.exe"

@@ -85,5 +85,8 @@ run it unpacks the robot project to `%USERPROFILE%\.kronoctf\Challenges`.
   widely.
 - **Antivirus flags the exe:** a known PyInstaller false-positive; add an exception, or
   code-sign.
-- **Easy/Medium/Hard can't open the project:** delete `%USERPROFILE%\.kronoctf\Challenges`
-  and relaunch to force a fresh unpack; confirm Step 1 bundled `_internal\Challenges\`.
+- **"Open in VS Code" opens an empty EasySolution.java** (or Easy/Medium can't find the
+  project): the WPILib project didn't unpack. Delete `%USERPROFILE%\.kronoctf\Challenges`
+  and relaunch to force a fresh copy. Confirm the install folder (e.g.
+  `%LOCALAPPDATA%\Programs\KronoCTF\`) contains a `Challenges\` folder — the installer
+  ships it there. If it's missing, rebuild from a clean checkout and recompile the installer.

@@ -4,14 +4,17 @@
 # Build on Windows:   pyinstaller KronoCTF.spec
 # Output:             dist\KronoCTF\  (KronoCTF.exe + _internal\, incl. Challenges)
 #
-# The WPILib challenge project is bundled as data; on first launch the app copies
-# it to a writable per-user folder (see robotproject.ensure_ready()).
+# The WPILib challenge project is bundled as data (absolute path via SPECPATH so it
+# can't be silently skipped); on first launch the app copies it to a writable per-user
+# folder (see robotproject.ensure_ready()). The installer also ships it next to the exe.
+
+import os
 
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('levels/challenges/Challenges', 'Challenges')],
+    datas=[(os.path.join(SPECPATH, 'levels', 'challenges', 'Challenges'), 'Challenges')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
