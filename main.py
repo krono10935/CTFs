@@ -21,6 +21,7 @@ from tkinter import font as tkfont
 
 import make_files
 import progress
+import robotproject
 from theme import (
     ACCENT, ACCENT_DARK, APP_TITLE, BG_SOFT, BG_WHITE, DANGER, INK, MUTED,
     PASSWORD,
@@ -178,6 +179,10 @@ class GameApp:
 
 
 def main():
+    # In a packaged build, unpack the WPILib project to a writable spot on first
+    # run (no-op from source). Done before the window so challenges can find it.
+    robotproject.ensure_ready()
+
     root = tk.Tk()
     GameApp(root)
     root.mainloop()

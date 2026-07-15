@@ -210,7 +210,7 @@ class Level:
         pop.transient(app.root)
         pop.grab_set()
 
-        w, h = 460, 380
+        w, h = 460, 400
         app.root.update_idletasks()
         x = app.root.winfo_rootx() + (app.root.winfo_width() - w) // 2
         y = app.root.winfo_rooty() + (app.root.winfo_height() - h) // 2
