@@ -45,7 +45,7 @@ class Level3(Level):
         'The warden sets a gauntlet. Each turn it declares wardenDirection = '
         '"right" or "left". Write ONE script that prints true to go right, or '
         "false to go left — then step through the turns. Survive "
-        f"{N_TURNS} turns. Use the full System.out.println( ... ), not print."
+        f"{N_TURNS} turns."
     )
     approval = "The corridor falls silent. Your script guided you through. The way is clear."
     takeaway_code = 'if (cond) { ... } else { ... }'

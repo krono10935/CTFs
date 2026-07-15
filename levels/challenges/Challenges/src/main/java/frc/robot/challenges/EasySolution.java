@@ -12,8 +12,6 @@ public final class EasySolution {
    * Visit the rooms and call check() on each one, in order.
    *
    * Concepts you may not have seen yet:
-   *   - rooms[i]          -> the Room object at index i (an array of objects)
-   *   - rooms.length      -> how many rooms there are (1000)
    *   - rooms[i].check()  -> calling a method on an object
    *   - Start at the 100th room. Arrays are 0-indexed — which index is that?
    *     (Checking any room before it, or skipping it, is punished.)

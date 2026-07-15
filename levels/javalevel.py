@@ -118,7 +118,7 @@ class JavaLevel(Level):
     def _check(self, code):
         """Return a teaching message if the code is disallowed, else None."""
         if not code.strip():
-            return "The editor is empty — write some code."
+            return "The editor is empty, write some code."
         if len(code) > 4000:
             return "That's a lot more code than this needs."
 
@@ -136,7 +136,7 @@ class JavaLevel(Level):
             return "Unbalanced braces — every `{` needs a matching `}`."
 
         if self.forbid_new and _NEW_RE.search(stripped):
-            return "No `new` here — use the array that's already given."
+            return "No `new` here, use the array that's already given."
         if _DECL_RE.search(stripped):
             return "Just write statements — no new declarations of that kind."
         if _RETURN_RE.search(stripped):

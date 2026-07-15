@@ -61,8 +61,8 @@ class Level5(JavaLevel):
         self.initial_state = list(self.cameras)
         self.greeting = (
             "Six security cameras guard the hall — true means on. Loop through "
-            "the boolean[] cameras and switch every one off (false). No `new`; "
-            "the array is final. Write your loop and press Run."
+            "the boolean[] cameras and switch every one off (false). Write your "
+            "loop and press Run."
         )
 
     @staticmethod

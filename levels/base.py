@@ -16,7 +16,7 @@ from theme import (
 # Matches  System.out.println( <inner> )  with optional trailing ';'.
 # Group 1 captures the raw argument text between the parentheses.
 _PRINTLN_RE = re.compile(
-    r"^\s*system\s*\.\s*out\s*\.\s*println\s*\(\s*(.*?)\s*\)\s*;?\s*$",
+    r"^\s*system\s*\.\s*out\s*\.\s*println\s*\(\s*(.*?)\s*\)\s*;\s*$",
     re.IGNORECASE | re.DOTALL,
 )
 

@@ -26,7 +26,7 @@ class Level2(Level):
     title = "The Interrogation"
     greeting = Q_NAME
     approval = "The gate creaks open. Welcome inside."
-    takeaway_code = 'System.out.println("name" / n / 2 / true);'
+    takeaway_code = 'System.out.println(string / integer / boolean);'
     takeaway_text = ('Strings use double quotes "...", the / operator on ints is '
                      'integer division (it drops the remainder), and true / false '
                      "are booleans.")
@@ -82,7 +82,8 @@ class Level2(Level):
             self.add_warden(Q_BOOL)
         else:
             self.add_warden("Integer division drops the remainder — try "
-                            "System.out.println(badgeNumber / 2);")
+                            "printing without the result of integer division "
+                            "instead of floating point division")
 
     def _answer_boolean(self, inner):
         value = inner.strip().lower()
