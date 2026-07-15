@@ -12,7 +12,12 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true,
-    "**/*~": true
+    "**/*~": true,
+    "**/EasyChallenge.java": true,
+    "**/MediumChallenge.java": true,
+    "**/Room.java": true,
+    "**/Progress.java": true,
+    "**/book.txt": true
   },
   "java.test.config": [
     {
