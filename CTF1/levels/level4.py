@@ -67,8 +67,7 @@ class Level4(JavaLevel):
             "A lock of 5 shapes bars the way. Reverse the array in place so it "
             "matches the goal below. Remember you can use a temp variable: `Shape temp = "
             "shapes[0];` as to hold the variable that will be swapped. Arrays start at index 0 "
-            "(so the last of 5 is index 4). Don't use `new`; the array is "
-            "final. Write your code and press Run."
+            "(so the last of 5 is index 4). Write your code and press Run."
         )
 
     @staticmethod

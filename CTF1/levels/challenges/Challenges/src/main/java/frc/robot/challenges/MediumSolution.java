@@ -21,9 +21,8 @@ public final class MediumSolution {
    * (for example: return "Word1 Word2 Word3";).
    */
   public static String solve(String[] book) {
-    // TODO: print every page here.
-
-    // TODO: replace this with the three-word phrase the book is hiding.
+    // TODO: replace this with the three-word phrase the book is hiding. Before this,
+    // figure out what is hidden in the pages are.  
     return "";
   }
 }

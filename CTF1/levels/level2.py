@@ -2,7 +2,7 @@
 
 Three questions, each answered through System.out.println( ... ); :
   1. Name    -> a String, e.g.  System.out.println("Alice");
-  2. Badge   -> badgeNumber / 2 as an int (teaches integer division)
+  2. Badge   -> badgeNumber / 2 as an int (teaches integer division). 
   3. Allowed -> a boolean;  true  passes,  false  resets the level.
 """
 

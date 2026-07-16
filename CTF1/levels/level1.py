@@ -20,4 +20,4 @@ class Level1(Level):
             return ("What bro?", False)
         if fails == 2:
             return ("I only speak Java!", False)
-        return ('System.out.println("I only speak Java!")', True)
+        return ('System.out.println("I only speak Java!");', True)
