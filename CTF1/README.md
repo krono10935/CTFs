@@ -1,4 +1,4 @@
-# KronoCTF — "The Warden"
+# KronoCTF - "The Warden"
 
 A small Tkinter game that teaches Java. Unlock the app with a passphrase, then work
 through a series of levels. the last three (Easy/Medium/Hard) are solved inside a real
@@ -8,9 +8,11 @@ WPILib robot project in VS Code.
 
 1. **Download the installer:**
    [KronoCTF-Setup.exe](https://github.com/krono10935/CTFs/releases/download/ctf1-latest/KronoCTF-Setup.exe)
-2. **Run it.** Windows may warn *"Windows protected your PC"* (the app isn't code-signed) -
+   
+3. **Run it.** Windows may warn *"Windows protected your PC"* (the app isn't code-signed) -
    click **More info → Run anyway**. It installs just for you, no admin needed.
-3. **Launch the game** from the **KronoCTF** shortcut in your Start Menu (or the desktop
+   
+5. **Launch the game** from the **KronoCTF** shortcut in your Start Menu (or the desktop
    shortcut, if you ticked that box during install).
 
 ### For the robot challenges (Easy / Medium / Hard)
@@ -28,6 +30,6 @@ check your answer.
 ---
 
 ## Running from source (developers)
-No installer needed — run the Python directly:
+No installer needed - run the Python directly:
 - **Windows:** double-click **`start.bat`**
 - **macOS:** double-click **`Start CTF.command`**
