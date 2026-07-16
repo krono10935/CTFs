@@ -5,7 +5,7 @@ self-contained folder; download its installer and play.
 
 | CTF | What you'll learn                                  | Download | Guide |
 |-----|----------------------------------------------------|----------|-------|
-| **CTF1 — The Warden Only Speaks Java** | Java basics → arrays & loops | **[⬇ Download (Windows)](https://github.com/krono10935/CTFs/releases/download/ctf1-latest/KronoCTF-Setup.exe)** | [CTF1/README.md](CTF1/README.md) |
+| **CTF1 — The Warden** | Java basics → arrays & loops | **[⬇ Download (Windows)](https://github.com/krono10935/CTFs/releases/download/ctf1-latest/KronoCTF-Setup.exe)** | [CTF1/README.md](CTF1/README.md) |
 | CTF2 — *coming soon* | —                                                  | — | — |
 
 ### Notes for students
