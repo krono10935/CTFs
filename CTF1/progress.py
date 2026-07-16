@@ -36,6 +36,11 @@ def load():
     return token if token in PHASES else DEFAULT
 
 
+def reset():
+    """Wipe progress back to the beginning (Level 1)."""
+    save(DEFAULT)
+
+
 def token_for(index):
     """Phase token for a level index (clamped into range)."""
     index = max(0, min(index, len(PHASES) - 1))

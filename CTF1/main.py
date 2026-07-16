@@ -18,6 +18,7 @@ Standard library only — run with:  python main.py
 import threading
 import tkinter as tk
 from tkinter import font as tkfont
+from tkinter import messagebox
 
 import make_files
 import progress
@@ -129,6 +130,23 @@ class GameApp:
 
         self.make_button(card, "Enter", self.try_login).pack(pady=(6, 0),
                                                              fill="x")
+
+        # Quiet "start over" so a player can restart from Level 1 without
+        # needing to know where progress is stored.
+        tk.Button(card, text="Start over", font=self.f_small, bg=BG_WHITE,
+                  fg=MUTED, activebackground=BG_WHITE, activeforeground=INK,
+                  relief="flat", bd=0, cursor="hand2",
+                  command=self._start_over).pack(pady=(12, 0))
+
+    def _start_over(self):
+        if messagebox.askyesno(
+                "Start over",
+                "Reset all progress and start again from the very beginning?"):
+            progress.reset()
+            self.level_index = 0
+            self.login_error.config(
+                text="Progress reset — enter the passphrase to begin.",
+                fg=MUTED)
 
     def _on_files_ready(self):
         self._files_ready = True
