@@ -1,6 +1,6 @@
 """Shared constants and color palette for the Warden CTF game."""
 
-APP_TITLE = "The Warden Only Speaks Java"
+APP_TITLE = "The Warden"
 PASSWORD = "The_warden_only_speaks_Java."
 
 # Palette
