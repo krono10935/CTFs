@@ -1,27 +1,14 @@
-# KronoCTF — "The Warden Only Speaks Java"
+# Krono CTFs
 
-A small Tkinter game that teaches Java. Unlock the app with a passphrase, then work
-through a series of levels — the last three (Easy/Medium/Hard) are solved inside a real
-WPILib robot project in VS Code.
+A collection of capture-the-flag challenges for learning to code. Each CTF is a
+self-contained folder; download its installer and play.
 
-## How to play
+| CTF | What you'll learn                                  | Download | Guide |
+|-----|----------------------------------------------------|----------|-------|
+| **CTF1 — The Warden Only Speaks Java** | Java basics → arrays & loops | **[⬇ Download (Windows)](https://github.com/krono10935/CTFs/releases/download/ctf1-latest/KronoCTF-Setup.exe)** | [CTF1/README.md](CTF1/README.md) |
+| CTF2 — *coming soon* | —                                                  | — | — |
 
-**Windows:** double-click **`start.bat`**.
-
-**macOS:** double-click **`Start CTF.command`**.
-
-That's it — no IDE required.
-
-### Requirements
-- **Python 3** with `tkinter` (both come with the standard installer from
-  [python.org](https://www.python.org/downloads/) — on Windows, tick *"Add Python to
-  PATH"*). The game uses only the Python standard library, so there is nothing to `pip
-  install`.
-- For the **Easy/Medium/Hard** robot challenges: the **WPILib** VS Code install (the
-  challenge screens open your solution file in it and you run *"Simulate Robot Code"*).
-
-### Notes
-- First launch generates the level-0 file-hunt folder under your home directory and may
-  take a moment.
-- Progress is saved to `~/.kronoctf/progress.txt`, so you resume where you left off (this
-  file is also how the WPILib project knows which challenge to run).
+### Notes for students
+- **Windows may warn "Windows protected your PC"** (the installer isn't code-signed).
+  Click **More info → Run anyway**. It installs per-user, no admin needed.
+- The **robot challenges** (Easy/Medium/Hard) need the **WPILib VS Code** install.

@@ -1,2 +1,10 @@
-
 __pycache__/
+*.pyc
+.venv/
+.DS_Store
+.idea/
+
+# Build artifacts for any CTF (never commit these — they go to Releases)
+build/
+dist/
+**/installer/Output/
