@@ -81,8 +81,8 @@ class Level2(Level):
             self.step = 2
             self.add_warden(Q_BOOL)
         else:
-            self.add_warden("Integer division drops the remainder — try "
-                            "printing without the result of integer division "
+            self.add_warden("Integer division drops the number after the decimal point"
+                            " — try printing without the result of integer division "
                             "instead of floating point division")
 
     def _answer_boolean(self, inner):
