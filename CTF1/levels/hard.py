@@ -15,6 +15,6 @@ class HardChallenge(ChallengeLevel):
     def __init__(self, app):
         super().__init__(app)
         self.greeting = (
-            "Robot challenge — HARD. This challenge is still under construction. "
-            "It will boot the real robot (RobotBase). Check back soon."
+            "Robot challenge — HARD. This challenge requires you to use the drivetrain configs"
+            "in order to ram into the hub. Before starting this challenge contact software lead or the mentors."
         )
